@@ -1,0 +1,26 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: user-service
+  profiles:
+    active: development
+
+---
+spring:
+  profiles: integration
+  datasource:
+    username: juntao
+    password: password
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ladder_test
+
+---
+spring:
+  profiles: development
+  datasource:
+    username: juntao
+    password: password
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ladder
