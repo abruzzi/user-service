@@ -33,11 +33,11 @@ import static com.jayway.restassured.path.json.JsonPath.from;
 import static org.hamcrest.core.IsCollectionContaining.hasItems;
 import static org.junit.Assert.assertThat;
 
+@ActiveProfiles(profiles = "integration")
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(UserApplication.class)
 @WebAppConfiguration
 @IntegrationTest("server.port:0")
-@ActiveProfiles(profiles = "integration")
 public class UserControllerTest {
     @Autowired
     private UserRepository userRepository;
